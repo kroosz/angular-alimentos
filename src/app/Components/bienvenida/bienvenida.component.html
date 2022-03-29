@@ -1,0 +1,17 @@
+<app-menu (tamanioMenu)="cambiarTamanioMenu($event)"></app-menu>
+<div class="contenedor-general" [ngClass]="estadoMenu">
+    <div class="titulo">
+        <h2>¡Bienvenido/a!</h2>
+    </div>
+    <div class="contenedor-platillo">
+        <h2>Platillo del Día</h2>
+        <div class="carta" (click)="verDetalle()">
+            <div class="img">
+                <img [src]="srcImage" alt="imagen alimento" height="300">
+            </div>
+            <div class="body">
+                <h2>{{titulo}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

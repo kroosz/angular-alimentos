@@ -1,0 +1,73 @@
+.contenedor-general {
+    position: relative;
+    left: 300px;
+    top: 60px;
+    padding: 30px;
+    width: calc(100% - 300px);
+    transition: ease 0.5s all;
+    &.activo {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .titulo {
+        width: 100%;
+        text-align: center;
+        h2 {
+            color: #085147;
+            font-size: 2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+    .carta {
+        position: relative;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        &.contenedor-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 2%;
+        }
+        .avatar {
+            background: #085147;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                color: white;
+                font-size: 2em;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+        }
+        button {
+            border-radius: 5px;
+            border: transparent;
+            background: #4093ff;
+            color: white;
+            font-size: 1em;
+            letter-spacing: 1px;
+        }
+        .nombre-usuario {
+            color: #085147;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        h2 {
+            color: #085147;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .form-field {
+            width: 31%;
+            margin-right: 2%;
+        }
+    }
+}

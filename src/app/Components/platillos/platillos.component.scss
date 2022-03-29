@@ -1,0 +1,80 @@
+.contenedor-general {
+    position: relative;
+    left: 300px;
+    top: 60px;
+    padding: 30px;
+    width: calc(100% - 300px);
+    transition: ease 0.5s all;
+    &.activo {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .titulo {
+        width: 100%;
+        text-align: center;
+        h2 {
+            color: #085147;
+            font-size: 2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+    .filtros {
+        position: relative;
+        margin-top: 2%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form-field {
+            margin-right: 2%;
+        }
+        button {
+            display: relative;
+            border: transparent;
+            background: #085147;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transform: translateY(-20%);
+        }
+    }
+    .tabla {
+        width: 100%;
+        margin-top: 2%;
+        .fila {
+            text-align: center;
+        }
+        tr {
+            cursor: pointer;
+        }
+    }
+    .contenedor-carousel {
+        position: relative;
+        width: 100%;
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        .carta {
+            position: relative;
+            background: white;
+            box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            cursor: pointer;
+            .body {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                h2 {
+                    color: #085147;
+                    font-size: 1em;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="navigation" [ngClass]="estadoMenu">
+        <ul>
+            <li>
+                <a routerLink="/bienvenida">
+
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/ingredientes-populares">
+
+                    <span class="title">Ingredientes Populares</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/platillos">
+
+                    <span class="title">Platillos</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/perfil-usuario">
+
+                    <span class="title">Perfil de Usuario</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="main" [ngClass]="estadoMenu">
+    <div class="topbar">
+        <div class="toggle" (click)="guardarMenu()">
+            <mat-icon>menu</mat-icon>
+        </div>
+    </div>
+</div>

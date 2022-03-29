@@ -1,0 +1,74 @@
+.contenedor-general {
+    position: relative;
+    top: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(27, 147, 153) 41%, rgb(7, 97, 102) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .titulo {
+        h2 {
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    }
+    .formulario {
+        width: 40%;
+        background: #0e463e;
+        padding: 30px;
+        border-radius: 10px;
+        form {
+            .form-field {
+                width: 100%;
+                mat-label {
+                    color: white;
+                }
+                button {
+                    background: transparent;
+                }
+            }
+            mat-checkbox {
+                margin-top: 2%;
+                color: white;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            button {
+                position: relative;
+                width: 100%;
+                border: transparent;
+                margin-top: 4%;
+                border-radius: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background: #174ea0;
+                color: white;
+                font-size: 1em;
+                letter-spacing: 2px;
+                &:disabled {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+::ng-deep {
+    .mat-form-field .mat-form-field-flex {
+        background-color: transparent !important;
+        border-bottom: white !important;
+    }
+    .mat-form-field-appearance-fill .mat-input-element {
+        caret-color: white !important;
+        color: white !important;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before {
+    background: white !important;
+}

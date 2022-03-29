@@ -1,0 +1,32 @@
+.contenedor-general {
+    position: relative;
+    left: 300px;
+    top: 60px;
+    padding: 30px;
+    width: calc(100% - 300px);
+    transition: ease 0.5s all;
+    &.activo {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .titulo {
+        width: 100%;
+        text-align: center;
+        h2 {
+            color: #085147;
+            font-size: 2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+    .tabla {
+        width: 100%;
+        margin-top: 2%;
+        .fila {
+            text-align: center;
+        }
+        tr {
+            cursor: pointer;
+        }
+    }
+}

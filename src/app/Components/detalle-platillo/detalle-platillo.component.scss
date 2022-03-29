@@ -1,0 +1,54 @@
+.contenedor-general {
+    position: relative;
+    left: 300px;
+    top: 60px;
+    padding: 30px;
+    width: calc(100% - 300px);
+    transition: ease 0.5s all;
+    &.activo {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .titulo {
+        width: 100%;
+        text-align: center;
+        h2 {
+            color: #085147;
+            font-size: 2em;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+    .carta {
+        position: relative;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 2%;
+        &.imagen-platillo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .titulo-platillo {
+                color: #085147;
+                font-size: 1.5em;
+                letter-spacing: 2px;
+                font-weight: 600;
+            }
+        }
+        h2 {
+            color: #085147;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .contenedor-lista {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<app-menu (tamanioMenu)="cambiarTamanioMenu($event)"></app-menu>
+<div class="contenedor-general" [ngClass]="estadoMenu">
+    <div class="titulo">
+        <h2>Platillos por ingrediente</h2>
+    </div>
+    <div class="contenedor-cartas">
+        <div class="carta" *ngFor="let ali of alimentos" (click)="verDetalle(ali.idMeal)">
+            <div class="img">
+                <img [src]="ali.strMealThumb" alt="imagen alimento" height="240">
+            </div>
+            <div class="body">
+                <h2>{{ali.strMeal}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

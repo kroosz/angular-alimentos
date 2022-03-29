@@ -1,0 +1,52 @@
+<app-menu (tamanioMenu)="cambiarTamanioMenu($event)"></app-menu>
+<div class="contenedor-general" [ngClass]="estadoMenu">
+    <div class="titulo">
+        <h2>Platillos</h2>
+    </div>
+    <div class="filtros">
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Áreas</mat-label>
+            <mat-select [(ngModel)]="area" [ngModelOptions]="{standalone: true}" (selectionChange)="filtrarTabla(1)">
+                <mat-option *ngFor="let are of catAreas" [value]="are.strArea">{{are.strArea}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Categorias</mat-label>
+            <mat-select [(ngModel)]="categorias" [ngModelOptions]="{standalone: true}" (selectionChange)="filtrarTabla(2)">
+                <mat-option *ngFor="let cat of catCategorias" [value]="cat.strCategory">{{cat.strCategory}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Ingredientes</mat-label>
+            <mat-select [(ngModel)]="categorias" [ngModelOptions]="{standalone: true}" (selectionChange)="filtrarTabla(2)">
+                <mat-option *ngFor="let cat of catIngredientes" [value]="cat.strIngredient">{{cat.strIngredient}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button (click)="LimpiarFiltro()">Limpiar Filtro</button>
+    </div>
+    <div class="tabla">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef class="fila">ID</th>
+              <td mat-cell class="fila" *matCellDef="let element">{{element.idMeal}}</td>
+            </ng-container>
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef class="fila">Nombre</th>
+              <td mat-cell class="fila" *matCellDef="let element">{{element.strMeal}}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns; let element;" (click)="verDetalle(element.idMeal)"></tr>
+        </table>
+        <mat-paginator style="width: 100%;" #paginator1 [length]="tamanioTabla" [pageSize]="5" class="shadow" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </div>
+    <div class="contenedor-carousel">
+        <div class="carta" *ngFor="let ali of alimentos" (click)="verDetalle(ali.idMeal)">
+            <div class="img">
+                <img [src]="ali.strMealThumb" alt="imagen alimento" height="180">
+            </div>
+            <div class="body">
+                <h2>{{ali.strMeal}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

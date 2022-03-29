@@ -1,0 +1,53 @@
+<app-menu (tamanioMenu)="cambiarTamanioMenu($event)"></app-menu>
+<div class="contenedor-general" [ngClass]="estadoMenu">
+    <div class="titulo">
+        <h2>Detalle del Platillo</h2>
+    </div>
+    <div class="carta imagen-platillo">
+        <img [src]="srcImagen" alt="imagen platillo" height="250">
+        <div class="titulo-platillo">{{titulo}}</div>
+    </div>
+    <div class="carta">
+        <h2>Ingredientes</h2>
+        <div class="contenedor-lista">
+            <div>
+                <ul>
+                    <li>{{medida1}} {{ingrediente1}}</li>
+                    <li>{{medida2}} {{ingrediente2}}</li>
+                    <li>{{medida3}} {{ingrediente3}}</li>
+                    <li>{{medida4}} {{ingrediente4}}</li>
+                    <li>{{medida5}} {{ingrediente5}}</li>
+                    <li>{{medida6}} {{ingrediente6}}</li>
+                    <li>{{medida7}} {{ingrediente7}}</li>
+                    <li>{{medida8}} {{ingrediente8}}</li>
+                    <li>{{medida9}} {{ingrediente9}}</li>
+                    <li>{{medida10}} {{ingrediente10}}</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>{{medida11}} {{ingrediente11}}</li>
+                    <li>{{medida12}} {{ingrediente12}}</li>
+                    <li>{{medida13}} {{ingrediente13}}</li>
+                    <li>{{medida14}} {{ingrediente14}}</li>
+                    <li>{{medida15}} {{ingrediente15}}</li>
+                    <li>{{medida16}} {{ingrediente16}}</li>
+                    <li>{{medida17}} {{ingrediente17}}</li>
+                    <li>{{medida18}} {{ingrediente18}}</li>
+                    <li>{{medida19}} {{ingrediente19}}</li>
+                    <li>{{medida20}} {{ingrediente20}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="carta">
+        <h2>Instrucciones</h2>
+        <div>
+            {{instrucciones}}
+        </div>
+    </div>
+    <div class="carta imagen-platillo">
+        <h2>Video</h2>
+        <iframe width="420" height="350" [src]="srcVideo"></iframe>
+    </div>
+</div>

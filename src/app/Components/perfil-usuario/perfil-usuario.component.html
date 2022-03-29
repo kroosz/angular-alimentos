@@ -1,0 +1,54 @@
+<app-menu (tamanioMenu)="cambiarTamanioMenu($event)"></app-menu>
+<div class="contenedor-general" [ngClass]="estadoMenu">
+    <div class="titulo">
+        <h2>Perfil de Usuario</h2>
+    </div>
+    <div class="carta contenedor-avatar">
+        <div class="avatar">
+            <span>{{iniciales}}</span>
+        </div>
+        <div class="nombre-usuario">
+            {{nombreCompleto}}
+        </div>
+        <button (click)="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+    <div class="carta">
+        <h2>Datos Usuario</h2>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Nombre(s)</mat-label>
+            <input matInput disabled [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Apellido Paterno</mat-label>
+            <input matInput disabled [(ngModel)]="apellidoPaterno" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Apellido Materno</mat-label>
+            <input matInput disabled [(ngModel)]="apellidoMaterno" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput disabled [(ngModel)]="fechaNacimiento" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Correo Electrónico</mat-label>
+            <input matInput disabled [(ngModel)]="correoElectronico" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Teléfono</mat-label>
+            <input matInput disabled [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Ciudad</mat-label>
+            <input matInput disabled [(ngModel)]="ciudad" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Delegación</mat-label>
+            <input matInput disabled [(ngModel)]="delegacion" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Fecha de Registro</mat-label>
+            <input matInput disabled [(ngModel)]="fechaRegistro" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+    </div>
+</div>
